@@ -1,0 +1,25 @@
+# Netlify configuration
+[build]
+  # Directory to publish (output of the build command)
+  publish = "build"
+  # Command to build your site
+  command = "npm run build"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables
+[build.environment]
+  # Set the NODE_VERSION to use during the build
+  NODE_VERSION = "20"
+
+# Headers
+[[headers]]
+  # Apply these headers to all paths
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
