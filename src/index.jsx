@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -156,7 +156,7 @@ const Page = () => {
 	}
 
 	const [users, setUsers] = useState([Andy])
-	const [searchVisible, setSearchVisible] = useState(true)
+	const [searchVisible, setSearchVisible] = useState(true) // eslint-disable-line no-unused-vars
 
 	const handleSearchSubmit = (query) => {
 		const params = new URLSearchParams()
